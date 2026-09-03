@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-02",
+  "status": "architecture_owner_bootstrap",
+  "objective": "Preserve CUDA-RNG as the provider-neutral RNG semantic owner and activate no production source until a consumer-backed bounded profile is accepted.",
+  "authority": [
+    "AGENTS.md",
+    "docs/PROJECT_CHARTER.md",
+    "docs/decisions/ADR-0001-independent-rng-semantic-owner.md"
+  ],
+  "current_focus": {
+    "issue": 3,
+    "status": "not_activated",
+    "next_action": "After the ownership bootstrap is integrated, assess concrete MCGS/NN/graph consumers and select the smallest reusable RNG semantic profile; implementation still requires an accepted child specification."
+  },
+  "parallel_governance": {
+    "issue": 2,
+    "status": "blocked_on_control_plane_mutation"
+  },
+  "do_not": [
+    "implement cuRAND or native provider bindings here",
+    "import NN, MCGS, graph or product policy into RNG semantics",
+    "deep-import CUDA-JS or recreate generic CUDA lifecycle",
+    "claim implementation, native support, statistical suitability or performance from repository creation"
+  ]
+}
