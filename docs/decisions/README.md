@@ -1,5 +1,7 @@
-# CUDA-RNG Architecture Decisions
+# CUDA-RNG architecture decisions
 
-Accepted decisions are immutable records. Supersede them with later ADRs rather than rewriting history.
+This directory records accepted architectural decisions. Later decisions may supersede earlier ones; retained records explain that history.
 
-- `ADR-0001-independent-rng-semantic-owner.md` — independent RNG semantic ownership and dependency direction.
+- [Independent random generation ownership](ADR-0001-independent-rng-semantic-owner.md): the library boundary and dependency direction.
+
+See the [specification index](../specs/README.md) before implementing a capability.
