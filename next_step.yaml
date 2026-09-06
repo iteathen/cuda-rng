@@ -1,30 +1,34 @@
 {
   "schema_version": 2,
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "status": "architecture_owner_integrated_consumer_activation_gated",
   "objective": "Preserve CUDA-RNG as the provider-neutral RNG semantic owner and activate no production source until a consumer-backed bounded profile is accepted.",
   "authority": [
     "AGENTS.md",
     "docs/PROJECT_CHARTER.md",
+    "docs/specs/SPEC-0001-native-boundary-and-js-only-implementation.md",
     "docs/decisions/ADR-0001-independent-rng-semantic-owner.md"
   ],
   "completed": {
-    "issue": 1,
-    "state": "ownership_bootstrap_integrated"
+    "ownership_bootstrap_issue": 1,
+    "repository_governance_issue": 2,
+    "repository_governance_state": "protected_main_aligned"
   },
   "current_focus": {
     "issue": 3,
     "status": "consumer_selection_required",
-    "next_action": "Assess concrete MCGS, NN and graph-analytics consumers now that ownership is integrated. Select the smallest reusable RNG semantic profile that survives consumer deletion; production implementation still requires an accepted bounded child specification."
+    "next_action": "Assess concrete MCGS and graph-analytics consumers and select the smallest reusable RNG semantic profile that survives consumer deletion. Treat future NN use as activation evidence only if cuda-nn is independently reactivated. Production implementation still requires an accepted bounded child specification."
   },
-  "parallel_governance": {
-    "issue": 2,
-    "status": "main_unprotected_control_plane_alignment_open"
+  "lower_native_state": {
+    "cuda_js_curand_issue": 92,
+    "status": "historical_dormant_not_planned",
+    "rule": "Reactivate or select the smallest bounded CUDA-JS native-provider successor only after an accepted CUDA-RNG profile actually selects cuRAND."
   },
   "do_not": [
     "implement cuRAND or native provider bindings here",
     "import NN, MCGS, graph or product policy into RNG semantics",
     "deep-import CUDA-JS or recreate generic CUDA lifecycle",
+    "move reusable non-native algorithm semantics into CUDA-JS",
     "claim implementation, native support, statistical suitability or performance from repository creation or completed governance"
   ]
 }
