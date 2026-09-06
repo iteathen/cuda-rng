@@ -1,19 +1,23 @@
-# cuda-rng
+# CUDA-RNG
 
-Reusable, application-neutral GPU random-generation semantics for the CUDA-JS ecosystem.
+CUDA-RNG is a planned JavaScript library for reusable random generation in the CUDA-JS ecosystem, intended for developers building GPU applications.
 
-**Status:** architecture/governance bootstrap; production implementation not authorized.
+## Current state
 
-CUDA-RNG is intended to own provider-neutral generator identity, deterministic stream/split/reproducibility rules, and finite distribution/sampling semantics. CUDA-JS remains the owner of CUDA runtime/provider mechanisms such as an eventual bounded cuRAND integration.
+This repository currently contains the project charter, architecture decision, development guidance, and planning records. **There is no production implementation, installable package, or public API yet.** No native-provider support or performance is claimed.
 
-The repository deliberately does not own NN/search/graph/product policy for why randomness is used.
+## Intended scope
 
-Start with `AGENTS.md`, `docs/PROJECT_CHARTER.md`, and `docs/decisions/ADR-0001-independent-rng-semantic-owner.md`.
+The library aims to define generator identity, deterministic streams and splitting, reproducibility, and bounded sampling through public CUDA-JS contracts.
 
-Tracking:
+NN, search, and application policies for using randomness remain with consumers. CUDA-JS supplies any native provider mechanisms; cryptographic randomness is outside this project's scope.
 
-- #1 ownership/bootstrap
-- #2 repository controls/protected `main`
-- #3 consumer-backed semantic roadmap
+Implementation depends on a concrete consumer need and an accepted specification. The [activation roadmap](https://github.com/iteathen/cuda-rng/issues/3) describes candidate work; it is not a commitment that every proposed capability will ship.
 
-No package, public API, native provider, support, performance, or production-readiness claim exists yet.
+## Start here
+
+- [Current status](STATUS.md).
+- [Project charter](docs/PROJECT_CHARTER.md) and [documentation](docs/README.md).
+- [Development instructions](AGENTS.md) and [shared contribution guide](https://github.com/iteathen/.github/blob/main/CONTRIBUTING.md).
+- [Private security reporting](https://github.com/iteathen/.github/blob/main/SECURITY.md).
+- [License](LICENSE).

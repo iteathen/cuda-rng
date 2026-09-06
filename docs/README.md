@@ -1,7 +1,10 @@
-# CUDA-RNG Documentation
+# CUDA-RNG documentation
 
-- `PROJECT_CHARTER.md` — accepted product boundary after bootstrap integration.
-- `decisions/` — immutable architecture decisions.
-- `specs/` — normative production contracts; currently empty by design.
+This directory contains the design and planning material for the proposed random generation library. Production specifications have not yet been accepted.
 
-Issues and roadmap text do not replace accepted ADR/spec authority.
+- [Project charter](PROJECT_CHARTER.md): purpose, intended scope, and boundaries.
+- [Architecture decisions](decisions/README.md): accepted ownership decisions.
+- [Specifications](specs/README.md): current contract status and requirements before implementation.
+- [Current project state](../STATUS.md): progress and next work.
+
+Roadmaps organize proposed work; accepted decisions and specifications govern their stated scopes.
