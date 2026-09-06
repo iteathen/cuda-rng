@@ -1,6 +1,8 @@
 # CUDA-RNG Status
 
-**Architecture:** independent RNG semantic owner selected.
+**Updated:** 2026-09-05
+
+**Architecture/governance:** independent RNG semantic owner integrated.
 
 **Production implementation:** not authorized.
 
@@ -12,10 +14,14 @@
 
 ## Current work
 
-- #1 establishes the durable ownership/bootstrap authority.
-- #2 tracks repository settings and protected-main alignment; `main` is unprotected at bootstrap.
-- #3 is the consumer-backed RNG semantic activation roadmap.
+- #1 established the durable ownership/bootstrap authority — completed.
+- #2 tracks repository settings and protected-main alignment; `main` remains unprotected.
+- #3 is the current consumer-backed RNG semantic activation roadmap; it is planning/assessment authority, not a production specification.
 
-The first implementation must be justified by a reusable consumer need, accepted through a bounded specification, and must consume only public lower-layer contracts. CUDA-JS #92 remains the lower cuRAND provider/mechanism owner.
+## Next executable decision
 
-No repository creation or roadmap entry is implementation authority.
+Assess concrete MCGS, NN and graph-analytics consumers and select the smallest reusable RNG semantic profile that survives consumer deletion. Any production implementation still requires an accepted bounded child specification and must consume only public lower-layer contracts.
+
+CUDA-JS #92 remains the lower cuRAND provider/mechanism owner. Provider availability does not move generator/distribution/reproducibility meaning into CUDA-JS or authorize CUDA-RNG implementation by itself.
+
+No roadmap entry, repository creation or completed governance bootstrap is production implementation authority.
