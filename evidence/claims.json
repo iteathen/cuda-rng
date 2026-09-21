@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "repository": "iteathen/cuda-rng",
+  "claims": [
+    {
+      "id": "CUDA-RNG-PLAN-001",
+      "claim": "Intended project scope is reusable random generation, deterministic streams, splitting, reproducibility, and bounded sampling through public CUDA-JS contracts.",
+      "evidence_class": "UNVALIDATED",
+      "status": "planning",
+      "oracle": "Repository charter and architecture decisions",
+      "revision": "main",
+      "falsifier": "An accepted project decision materially changes the intended scope.",
+      "evidence": [
+        "README.md",
+        "STATUS.md",
+        "docs/PROJECT_CHARTER.md"
+      ],
+      "limitations": [
+        "No production implementation, statistical quality result, native-provider support, cryptographic suitability, or performance is established."
+      ],
+      "external_reproduction": false
+    }
+  ]
+}
