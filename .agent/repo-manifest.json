@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "repository": "iteathen/cuda-rng",
+  "visibility": "public",
+  "default_branch": "main",
+  "canonical": "https://github.com/iteathen/cuda-rng",
+  "anonymous_access": {
+    "git": "https://github.com/iteathen/cuda-rng.git",
+    "raw_base": "https://raw.githubusercontent.com/iteathen/cuda-rng/main/",
+    "zip": "https://codeload.github.com/iteathen/cuda-rng/zip/refs/heads/main",
+    "tar_gz": "https://codeload.github.com/iteathen/cuda-rng/tar.gz/refs/heads/main"
+  },
+  "entrypoints": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llm_index": "llms.txt",
+    "access": ".agent/ACCESS.md"
+  },
+  "authentication_required_for_read": false,
+  "api_required_for_read": false
+}
